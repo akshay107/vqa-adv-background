@@ -1,1 +1,1 @@
-readme for n2nmn
+readme for N2NMN
