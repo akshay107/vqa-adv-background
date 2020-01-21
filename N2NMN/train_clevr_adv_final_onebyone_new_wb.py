@@ -75,7 +75,7 @@ lambda_entropy = 0.005
 weight_decay = 5e-6
 baseline_decay = 0.99
 max_grad_l2_norm = 10
-max_trials = 3
+max_trials = 5
 max_iter = 1500
 log_interval = 20
 exp_name = "clevr_rl_gt_layout"
@@ -261,7 +261,7 @@ for enum, batch in enumerate(data_reader_trn.batches()):
         break
     batch['image_batch'], batch['masking_batch'] = extract_image_and_mask(batch['image_path_list'])
     success = []
-    C_val = [25]
+    C_val = [100]
     adv_image_j = []
     W_adv3_j = []
     adv_iter_j = []
