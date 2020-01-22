@@ -20,6 +20,7 @@ class Config(object):
 
     # file names
     #imagesFilename = "masked_features/{tier}.h5" # Images
+    clevrPath = "/home/cvpr/akshay/CLEVR/CLEVR_v1.0/images/val/"
     instancesFilename = "./CLEVR_v1/data/genadv_{tier}Instances_v2.json"
     # symbols dictionaries
     questionDictFilename = "./CLEVR_v1/data/genquestionDict.pkl"
