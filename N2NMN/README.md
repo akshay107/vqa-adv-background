@@ -1,4 +1,4 @@
-readme for N2NMN
+**Readme for N2NMN**
 
 TODO:
 1. check for absolute paths. absolute paths are in numpy files.
