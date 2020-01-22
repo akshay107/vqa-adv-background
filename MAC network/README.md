@@ -1,4 +1,4 @@
-readme for MAC network
+Readme for MAC network
 
 TODO:
 
