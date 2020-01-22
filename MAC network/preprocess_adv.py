@@ -397,7 +397,7 @@ class Preprocesser(object):
         print(instances[0][u'imageId'])
         print(datasetFilename)
         for i in range(len(instances)):
-            instances[i][u'imagePath'] = "/home/cvpr/akshay/CLEVR/CLEVR_v1.0/images/val/CLEVR_val_" + "0"*(6-len(str(instances[i][u'imageId'])))+ str(instances[i][u'imageId']) +".png"
+            instances[i][u'imagePath'] = config.clevrPath + "CLEVR_val_" + "0"*(6-len(str(instances[i][u'imageId'])))+ str(instances[i][u'imageId']) +".png"
         print(instances[0][u'imagePath'])
         return {"instances": instances, "train": train}
 
