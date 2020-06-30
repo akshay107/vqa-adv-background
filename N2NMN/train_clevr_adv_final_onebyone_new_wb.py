@@ -24,13 +24,15 @@ from models_clevr_adv.nmn3_model import NMN3Model
 from util_new.clevr_train.data_reader import DataReader
 import skimage.io
 import cv2
+import os
 
+clevr_imgdir = 'exp_clevr/clevr-dataset/images/' # set path to clevr images here
 
 def extract_image_and_mask(imlist):
     img = []
     mask = []
     for impath in imlist:
-         im = skimage.io.imread(impath)[..., :3]
+         im = skimage.io.imread(os.path.join(clevr_imgdir,impath.split("/")[-1]))[..., :3]
          edges = cv2.Canny(im,100,200)
          M = np.zeros(im.shape,dtype=np.uint8)
          xmin = max(np.min(np.where(edges!=0)[0]) - 2, 0)
@@ -50,7 +52,6 @@ def extract_image_and_mask(imlist):
 
 # vgg_net_new.tfmodel is pretrained vgg with tensor names prefixed by 'neural_module_network/image_feature_cnn/'
 vgg_net_model = 'exp_clevr/vgg_net_new.tfmodel'
-image_basedir = 'exp_clevr/clevr-dataset/images/'
 
 
 # Module parameters
